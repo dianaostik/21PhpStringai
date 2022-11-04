@@ -44,5 +44,6 @@
     ?>
 
         <?php include "./masyvai.php"; ?>
+        <?php include "./funkcijos.php"; ?>
 </body>
 </html>
