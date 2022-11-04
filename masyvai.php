@@ -73,9 +73,16 @@ echo"<p> g) ------------ </p>";
 echo"<p> h) ------------ </p>";
         for ($y=0; $y < count($arr); $y++) { 
             if ($arr[$y] > 10) {
-                echo $y;
+                echo ("Pirmas indeksas su reiksme didesne, nei 10 =     " . $y);
                 break;
             }
         }
 
+
+echo"<p> i) ------------ </p>";
+    for ($j=0; $j < count($arr); $j += 2) { 
+        unset($arr[$j]);
+    }
+    echo("Masyvas be poriniu indeksu: <br>");
+    print_r($arr);
 ?>
