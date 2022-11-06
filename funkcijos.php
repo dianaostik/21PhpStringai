@@ -3,11 +3,11 @@
 
 echo"<h2> -------- Funkcijos ------------ </h2>";
 echo"<p> -------- 1 ir 2 uzduotis ------------ </p>";
-        function writeMsg($fname, $ftag) {
-            echo ("<h" . $ftag . ">" . $fname . "</h" . $ftag . ">");
-        }
-            
-        writeMsg("Programavimas", "1");
+    function writeMsg($fname, $ftag) {
+        echo ("<h" . $ftag . ">" . $fname . "</h" . $ftag . ">");
+    }
+        
+    writeMsg("Programavimas", "1");
 
 
 
@@ -42,27 +42,46 @@ echo"<p> -------- 4 uzduotis ------------ </p>";
 
 
 echo"<p> -------- 5 uzduotis ------------ </p>";
-// Neskaiciuoja
-        $arr = [];
-            for ($x=0; $x < 100; $x++) { 
-                $arr[] = rand(33,77);
-            }
-        print_r($arr);
-        echo("<br>");
-        echo("<br>");
-        
-            $somearr = [];
-            for ($a = 0; $a < count($arr); $a++) {
-                    if (numSum($arr[$a]) < numSum($arr[$a++])) {
-                        $somearr [] = $arr[$a];  
-                    }   
-            }
-        sort($somearr);
-        print_r($somearr);  
+// Po nulio 10 eina
+    $arr = [];
+        for ($x=0; $x < 100; $x++) { 
+            $arr[] = rand(33,77);
+        }
+    print_r($arr);
+    echo("<br>");
+    echo("<br>");
+    
+    $somearr = [];
+        for ($a = 0; $a < count($arr); $a++) {
+            $somearr [] = numSum($arr[$a]) . " - " . $arr[$a]; 
+            // echo(numSum($arr[$a]) . "   ");  
+        }
+    rsort($somearr);
+    echo("Masyvas išrūšiuotas pagal daliklių be liekanos kiekį mažėjimo tvarka: <br> ");
+    print_r($somearr);  
 
 
 
 echo"<p> -------- 6 uzduotis ------------ </p>";
+    $newArr = [];
+        for ($b = 0; $b < 100; $b++) {
+            $newArr [] = rand(1,10);
+        }
+    print_r($newArr);
+    echo("<br>");
+    echo("<br>");
+    $arrayGone = [];
+    for ($i=0; $i < count($newArr); $i++) { 
+        // echo($newArr[$i] . "   ");
+        if (numSum($newArr[$i]) > 0) {
+            $arrayGone [] = $newArr[$i];
+        }
+    }
+    echo("Masyvas be pirminiu skaiciu: <br> ");
+    print_r($arrayGone);
+
+
+
 
 
 
