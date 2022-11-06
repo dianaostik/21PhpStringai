@@ -57,7 +57,7 @@ echo"<p> -------- 5 uzduotis ------------ </p>";
             // echo(numSum($arr[$a]) . "   ");  
         }
     rsort($somearr);
-    echo("Masyvas išrūšiuotas pagal daliklių be liekanos kiekį mažėjimo tvarka: <br> ");
+    echo(" <p>  Masyvas išrūšiuotas pagal daliklių be liekanos kiekį mažėjimo tvarka: </p> ");
     print_r($somearr);  
 
 
@@ -65,22 +65,48 @@ echo"<p> -------- 5 uzduotis ------------ </p>";
 echo"<p> -------- 6 uzduotis ------------ </p>";
     $newArr = [];
         for ($b = 0; $b < 100; $b++) {
-            $newArr [] = rand(1,10);
+            $newArr [] = rand(1,10); // pakeisti i salyga 333,777
         }
     print_r($newArr);
     echo("<br>");
     echo("<br>");
     $arrayGone = [];
-    for ($i=0; $i < count($newArr); $i++) { 
-        // echo($newArr[$i] . "   ");
-        if (numSum($newArr[$i]) > 0) {
-            $arrayGone [] = $newArr[$i];
+        for ($i=0; $i < count($newArr); $i++) { 
+            // echo($newArr[$i] . "   ");
+            if (numSum($newArr[$i]) > 0) {
+                $arrayGone [] = $newArr[$i];
+            }
         }
-    }
-    echo("Masyvas be pirminiu skaiciu: <br> ");
+    echo(" <p> Masyvas be pirminiu skaiciu: </p> ");
     print_r($arrayGone);
 
 
+
+
+echo"<p> -------- 7 uzduotis ------------ </p>";
+    $newArr2 = [];
+    $howManytimes = rand(10,20);
+        for ($b = 0; $b < $howManytimes; $b++) {
+            $newArr2 [] = rand(0,10); 
+        }
+    $newArr2[$howManytimes] = 0;
+    echo(" <p> Masyvas nuo 10 iki 20 elementu, su skaiciais nuo 0 iki 10. Masyvo paskutinis elementas yra lygus 0: </p> ");
+    print_r($newArr2);
+
+
+
+echo"<p> -------- 8 uzduotis ------------ </p>";
+    $sum = 0;
+        for ($f=0; $f < count($newArr2); $f++) { 
+            $sum += $newArr2[$f];
+        }
+    echo("Visu skaiciu suma yra =    " . $sum);
+
+
+
+
+
+echo"<p> -------- 9 uzduotis ------------ </p>";
 
 
 
