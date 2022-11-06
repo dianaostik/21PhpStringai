@@ -10,20 +10,40 @@ echo"<p> -------- 1 ir 2 uzduotis ------------ </p>";
         writeMsg("Programavimas", "1");
 
 
+
+
 echo"<p> -------- 3 uzduotis ------------ </p>";
-    //  $rndStr = md5(time()); 
-    //  echo $rndStr; 
-    //     echo "<br>";  
-    //     if (true) {
-    //        $rndStr1 = preg_replace_callback('/\D/', '', $rndStr);
-    //         echo ("<h1>" . $rndStr1 . "</h1>"); 
-    //     } else {
-    //         echo ("<P>" . $rndStr ."</p>");
-    //     }
+     $rndStr = md5(time()); 
+        echo $rndStr; 
+        echo "<br>";  
+    $numbers = preg_replace('/[^0-9]/', '', $rndStr);
+    $letters = preg_replace('/[^a-zA-Z]/', '', $rndStr);
+        echo ("<br>"); 
+        print_r($letters);
+        print_r("<h1>" .  $numbers . "</h1>");
+
+
+
+
+echo"<p> -------- 4 uzduotis ------------ </p>";
     
-    // $rndStr1 = preg_split('/(?<=[0-9])(?=[a-z]+)/i',$rndStr);   
-    // echo("<br>");                                  
-    // echo json_encode($rndStr1);
+        $number = 20;
+            function numSum($number1){
+                $sum = 0;
+                for ($i=2; $i < $number1; $i++) { 
+                    if ($number1 % $i == 0) {
+                        $sum++;
+                    }        
+                }
+                return $sum;
+            }
+        echo("Skaicius " . $number . " dalijasi (isskirus 1 ir pati save) :  " . numSum($number));
+
+
+
+
+echo"<p> -------- 5 uzduotis ------------ </p>";
+
 
 
 
