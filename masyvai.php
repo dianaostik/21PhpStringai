@@ -89,8 +89,7 @@ echo"<p> i) ------------ </p>";
 
 
 echo"<p> -------- 3 uzduotis ------------ </p>";
-
-    function generateRandomString($length = 200) {
+    function generateRandomString($length = 50) {
         $characters = 'ABCD';
         $charactersLength = strlen($characters);
         $randomString = '';
@@ -112,7 +111,25 @@ echo"<p> -------- 3 uzduotis ------------ </p>";
  
 
    
+
+
 echo"<p> -------- 4 uzduotis ------------ </p>";
+    $stringParts = str_split($letterStr);
+    sort($stringParts);
+    echo implode($stringParts);
+        
 
 
+
+
+echo"<p> -------- 5 uzduotis ------------ </p>";
+//Neisveda kombinaciju
+    $letterStr1 = generateRandomString();
+    $letterStr2 = generateRandomString();
+    echo($letterStr);
+    echo("<br>");
+    echo($letterStr1);
+    echo("<br>");
+    echo($letterStr2);
+    echo("<br>");
 ?>

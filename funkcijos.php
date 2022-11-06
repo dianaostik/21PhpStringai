@@ -101,14 +101,4 @@ echo"<p> -------- 8 uzduotis ------------ </p>";
             $sum += $newArr2[$f];
         }
     echo("Visu skaiciu suma yra =    " . $sum);
-
-
-
-
-
-echo"<p> -------- 9 uzduotis ------------ </p>";
-
-
-
-
 ?>
