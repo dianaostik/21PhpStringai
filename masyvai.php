@@ -85,4 +85,46 @@ echo"<p> i) ------------ </p>";
     }
     echo("Masyvas be poriniu indeksu: <br>");
     print_r($arr);
+
+
+
+echo"<p> -------- 3 uzduotis ------------ </p>";
+
+    function generateRandomString($length = 100) {
+        $characters = 'ABCD';
+        $charactersLength = strlen($characters);
+        $randomString = '';
+            for ($i = 0; $i < $length; $i++) {
+                $randomString .= $characters[rand(0, $charactersLength - 1)];
+            }
+        return $randomString;
+    }
+    echo(generateRandomString());
+
+    //  $letterA = 0;
+    // // $letterB = 0;
+    // // $letterC = 0;
+    // // $letterD = 0;
+    
+    //  for ($f = 0; $f < count(generateRandomString()); $f++) {
+    //      if ( $f == 'A') {
+    //          $letterA++; 
+    //  }
+    //     // if (letterArr[f] == "B") {
+    //     //     letterB++; 
+    //     // }
+    //     // if (letterArr[f] == "C") {
+    //     //     letterC++; 
+    //     // }
+    //     // if (letterArr[f] == "D") {
+    //     //     letterD++; 
+    //      }
+    // }
+    //  echo("A : " + $letterA);
+    // // console.log("B : " + letterB);
+    // // console.log("C : " + letterC);
+    // // console.log("D : " + letterD);
+
+
+
 ?>
