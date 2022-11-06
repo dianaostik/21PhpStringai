@@ -90,7 +90,7 @@ echo"<p> i) ------------ </p>";
 
 echo"<p> -------- 3 uzduotis ------------ </p>";
 
-    function generateRandomString($length = 100) {
+    function generateRandomString($length = 200) {
         $characters = 'ABCD';
         $charactersLength = strlen($characters);
         $randomString = '';
@@ -99,32 +99,20 @@ echo"<p> -------- 3 uzduotis ------------ </p>";
             }
         return $randomString;
     }
-    echo(generateRandomString());
+        $letterStr = generateRandomString();
+        echo($letterStr);
+        echo("<br> A raidziu yra =    ");
+        echo substr_count($letterStr,"A");
+        echo("<br> B raidziu yra =    ");
+        echo substr_count($letterStr,"B");
+        echo("<br> C raidziu yra =    ");
+        echo substr_count($letterStr,"C");
+        echo("<br> D raidziu yra =    ");
+        echo substr_count($letterStr,"D");
+ 
 
-    //  $letterA = 0;
-    // // $letterB = 0;
-    // // $letterC = 0;
-    // // $letterD = 0;
-    
-    //  for ($f = 0; $f < count(generateRandomString()); $f++) {
-    //      if ( $f == 'A') {
-    //          $letterA++; 
-    //  }
-    //     // if (letterArr[f] == "B") {
-    //     //     letterB++; 
-    //     // }
-    //     // if (letterArr[f] == "C") {
-    //     //     letterC++; 
-    //     // }
-    //     // if (letterArr[f] == "D") {
-    //     //     letterD++; 
-    //      }
-    // }
-    //  echo("A : " + $letterA);
-    // // console.log("B : " + letterB);
-    // // console.log("C : " + letterC);
-    // // console.log("D : " + letterD);
-
+   
+echo"<p> -------- 4 uzduotis ------------ </p>";
 
 
 ?>
