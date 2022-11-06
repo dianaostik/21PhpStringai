@@ -13,7 +13,7 @@ echo"<p> -------- 1 ir 2 uzduotis ------------ </p>";
 
 
 echo"<p> -------- 3 uzduotis ------------ </p>";
-     $rndStr = md5(time()); 
+    $rndStr = md5(time()); 
         echo $rndStr; 
         echo "<br>";  
     $numbers = preg_replace('/[^0-9]/', '', $rndStr);
@@ -26,24 +26,43 @@ echo"<p> -------- 3 uzduotis ------------ </p>";
 
 
 echo"<p> -------- 4 uzduotis ------------ </p>";
-    
-        $number = 20;
-            function numSum($number1){
-                $sum = 0;
-                for ($i=2; $i < $number1; $i++) { 
-                    if ($number1 % $i == 0) {
-                        $sum++;
-                    }        
-                }
-                return $sum;
+    $number = 20;
+        function numSum($number1){
+            $sum = 0;
+            for ($i=2; $i < $number1; $i++) { 
+                if ($number1 % $i == 0) {
+                    $sum++;
+                }        
             }
-        echo("Skaicius " . $number . " dalijasi (isskirus 1 ir pati save) :  " . numSum($number));
+            return $sum;
+        }
+    echo("Skaicius " . $number . " dalijasi (isskirus 1 ir pati save) :  " . numSum($number));
 
 
 
 
 echo"<p> -------- 5 uzduotis ------------ </p>";
+// Neskaiciuoja
+        $arr = [];
+            for ($x=0; $x < 100; $x++) { 
+                $arr[] = rand(33,77);
+            }
+        print_r($arr);
+        echo("<br>");
+        echo("<br>");
+        
+            $somearr = [];
+            for ($a = 0; $a < count($arr); $a++) {
+                    if (numSum($arr[$a]) < numSum($arr[$a++])) {
+                        $somearr [] = $arr[$a];  
+                    }   
+            }
+        sort($somearr);
+        print_r($somearr);  
 
+
+
+echo"<p> -------- 6 uzduotis ------------ </p>";
 
 
 
